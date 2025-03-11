@@ -54,7 +54,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void navigateToHome() {
-    Future.delayed(const Duration(seconds: 4), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Get.to(() => const HomeView(),
           transition: Transition.fade, duration: kTransitionDuration);
     });
