@@ -23,7 +23,13 @@ class HomeViewBody extends StatelessWidget {
               SizedBox(height: 50),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30),
-                child: Text('Best Seller', style: Styles.textStyle20),
+                child: Text(
+                  'Best Seller',
+                  style: Styles.textStyle20,
+                ),
+              ),
+              SizedBox(
+                height: 20,
               ),
             ],
           ),
@@ -33,10 +39,8 @@ class HomeViewBody extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: BestSellerListView(),
           ),
-        )
+        ),
       ],
     );
   }
 }
-
-
