@@ -20,6 +20,7 @@ class HomeRepoImpl implements HomeRepo {
       for (var item in data['items']) {
         books.add(BookModel.fromJson(item));
       }
+
       return right(books);
     } on Exception catch (e) {
       if (e is DioException) {
@@ -38,6 +39,7 @@ class HomeRepoImpl implements HomeRepo {
       for (var item in data['items']) {
         books.add(BookModel.fromJson(item));
       }
+
       return right(books);
     } on Exception catch (e) {
       if (e is DioException) {
