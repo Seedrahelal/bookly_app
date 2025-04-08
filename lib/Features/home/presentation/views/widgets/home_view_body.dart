@@ -9,36 +9,34 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
-      physics: BouncingScrollPhysics(),
+    return CustomScrollView(
+      physics: const BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 child: CustomAppBar(),
               ),
-              FeaturedBooksListView(),
-              SizedBox(height: 50),
+              const FeaturedBooksListView(),
+              const SizedBox(height: 50),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30),
+                padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
-                  'Newset Books',
-                  style: Styles.textStyle20,
+                  'Newest Books',
+                  style:
+                      Styles.textStyle20.copyWith(fontWeight: FontWeight.w900),
                 ),
               ),
-              SizedBox(
-                height: 20,
+              const SizedBox(height: 20),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: BestSellerListView(),
               ),
+              const SizedBox(height: 20),
             ],
-          ),
-        ),
-        SliverFillRemaining(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30),
-            child: BestSellerListView(),
           ),
         ),
       ],
